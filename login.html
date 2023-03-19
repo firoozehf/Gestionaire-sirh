@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>absent present</title>
+    <link rel="stylesheet" href="login.CSS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="mp2.js"></script>
+  </head>
+  <body>
+    <p id="datetime"></p>
+    <script>
+      var today = new Date();
+      var date =
+        today.getFullYear() +
+        "-" +
+        (today.getMonth() + 1) +
+        "-" +
+        today.getDate();
+      var time =
+        today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      var dateTime = date + " " + time;
+      document.getElementById("datetime").innerHTML = dateTime;
+    </script>
+    <form action="login.php" method="post" class="login-form">
+      <h2>Register</h2>
+      <div class="form-group">
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom" required />
+        <label for="nomdefamille">Nom de famille:</label>
+        <input type="text" id="nomdefamille" name="nomdefamille" required />
+        <label for="numerodeportable">Numero de portable:</label>
+        <input type="number" id="numerodeportable" name="numerodeportable" required />
+        <label for="email:">Email</label>
+        <input type="email" id="email" name="email" required />
+
+      </div>
+      <button type="submit">Register</button>
+    </form>
+  </body>
+</html>
