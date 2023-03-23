@@ -27,7 +27,11 @@
   color: #666;
 }
 
-.login-form input[type="text"] {
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"] 
+{
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
